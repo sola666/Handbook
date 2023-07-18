@@ -3,7 +3,7 @@
 
 This manual provides a reference for common tasks and functions in Python, PHP, and JavaScript.
 
-# **Pt. 1 | The Basics**
+# **Pt. 1 | Basics**
 
 | Task / Function | Python | PHP | JavaScript | Description |
 |-----------------|--------|-----|------------|-------------|
