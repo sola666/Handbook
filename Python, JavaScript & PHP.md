@@ -271,7 +271,7 @@ loop = asyncio.get_event_loop()
 loop.run_until_complete(main())
 ```
 
-**`JavaScript`**: JavaScript is inherently asynchronous, with many built-in features for handling asynchronous code. Here's an example using **`fetch`** to make asynchronous HTTP requests:
+**JavaScript**: JavaScript is inherently asynchronous, with many built-in features for handling asynchronous code. Here's an example using **`fetch`** to make asynchronous HTTP requests:
 
 ```javascript
 async function get_page(url) {
