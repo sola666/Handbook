@@ -3,7 +3,7 @@
 
 This manual provides a reference for common tasks and functions in Python, PHP, and JavaScript.
 
-# **Pt. 1 | Basics**
+# **Pt. 1 | The Basics**
 
 | Task / Function | Python | PHP | JavaScript | Description |
 |-----------------|--------|-----|------------|-------------|
@@ -23,7 +23,8 @@ This manual provides a reference for common tasks and functions in Python, PHP, 
 
 ## **Error Handling**
 ---
-**Python**: In Python, errors are handled with **`try/except`** blocks. An optional `finally` block can be added to execute code regardless of whether an exception was thrown or not.
+### **Python**
+ In Python, errors are handled with **`try/except`** blocks. An optional `finally` block can be added to execute code regardless of whether an exception was thrown or not.
 
 ```python
 try:
@@ -34,7 +35,8 @@ finally:
     print("This is the end of the program.")
 ```
 
-**JavaScript**: JavaScript uses **`try/catch`** blocks for error handling. An optional finally block can also be included. The key difference is that JavaScript doesn't have as many built-in exceptions as Python, and usually throws a generic **`Error`** object.
+### **JavaScript**
+ JavaScript uses **`try/catch`** blocks for error handling. An optional finally block can also be included. The key difference is that JavaScript doesn't have as many built-in exceptions as Python, and usually throws a generic **`Error`** object.
 
 ```javascript
 try {
@@ -46,7 +48,8 @@ try {
 }
 ```
 
-**PHP**: PHP uses **`try/catch`** blocks for error handling, very similar to JavaScript. Note that PHP will throw a **`DivisionByZeroError`** exception when attempting to divide by zero.
+### **PHP**
+ PHP uses **`try/catch`** blocks for error handling, very similar to JavaScript. Note that PHP will throw a **`DivisionByZeroError`** exception when attempting to divide by zero.
 
 ```php
 try {
@@ -60,7 +63,8 @@ try {
 
 ## **File I/O**
 ---
-**Python**: In Python, you can open a file with **`open()`**, and it's common to use a **`with`** block, so the file gets closed automatically after the block of code is executed.
+### **Python**
+ In Python, you can open a file with **`open()`**, and it's common to use a **`with`** block, so the file gets closed automatically after the block of code is executed.
 
 ```python
 with open('file.txt', 'r') as f:
@@ -68,7 +72,8 @@ with open('file.txt', 'r') as f:
 print(content)
 ```
 
-**JavaScript**: JavaScript is primarily a browser-based language, so it doesn't have built-in file I/O operations like Python or PHP. However, with Node.js, you can perform file I/O using the **`fs`** module.
+### **JavaScript**
+ JavaScript is primarily a browser-based language, so it doesn't have built-in file I/O operations like Python or PHP. However, with Node.js, you can perform file I/O using the **`fs`** module.
 
 ```javascript
 const fs = require('fs');
@@ -82,7 +87,8 @@ fs.readFile('file.txt', 'utf8', (err, data) => {
 });
 ```
 
-**PHP**: In PHP, the **`fopen()`** function can open a file. It's then common to use **`fread()`** to read the contents and **`fclose()`** to close the file.
+### **PHP**
+ In PHP, the **`fopen()`** function can open a file. It's then common to use **`fread()`** to read the contents and **`fclose()`** to close the file.
 
 ```php
 $file = fopen("file.txt", "r");
@@ -94,7 +100,8 @@ echo $content;
 
 ## **Regular Expressions**
 ---
-**Python**: Python uses the **`re`** module for regular expressions. For example, to find all occurrences of "Python" in a string:
+### **Python**
+ Python uses the **`re`** module for regular expressions. For example, to find all occurrences of "Python" in a string:
 
 ```python
 import re
@@ -104,7 +111,8 @@ matches = re.findall("Python", text)
 print(matches)  # Output: ['Python', 'Python']
 ```
 
-**JavaScript**: JavaScript has built-in support for regular expressions. Similar to the Python example:
+### **JavaScript**
+ JavaScript has built-in support for regular expressions. Similar to the Python example:
 
 ```javascript
 let text = "JavaScript is fun. I like JavaScript!";
@@ -112,7 +120,8 @@ let matches = text.match(/JavaScript/g);
 console.log(matches);  // Output: ['JavaScript', 'JavaScript']
 ```
 
-**PHP**: PHP uses the **`preg_match_all()`** function to find all matches of a regular expression in a string.
+### **PHP**
+ PHP uses the **`preg_match_all()`** function to find all matches of a regular expression in a string.
 
 ```php
 $text = "PHP is fun. I like PHP!";
@@ -122,7 +131,8 @@ print_r($matches[0]);  // Output: Array ( [0] => PHP [1] => PHP )
 
 ## **Object-Oriented Programming (Classes and Objects)**
 ---
-**Python**: Python supports object-oriented programming with classes and objects. Here is a basic example of a class with a constructor and a method.
+### **Python**
+ Python supports object-oriented programming with classes and objects. Here is a basic example of a class with a constructor and a method.
 
 ```python
 class MyClass:
@@ -136,7 +146,8 @@ obj = MyClass("Python")
 obj.say_hello()  # Output: Hello, Python!
 ```
 
-**JavaScript**: JavaScript supports object-oriented programming with prototypes, but also has a **`class`** syntax that was added in ES6, which is more similar to the class syntax in other languages like Python and PHP.
+### **JavaScript**
+ JavaScript supports object-oriented programming with prototypes, but also has a **`class`** syntax that was added in ES6, which is more similar to the class syntax in other languages like Python and PHP.
 
 ```javascript
 class MyClass {
@@ -153,7 +164,8 @@ let obj = new MyClass("JavaScript");
 obj.sayHello();  // Output: Hello, JavaScript!
 ```
 
-**PHP**: PHP also supports object-oriented programming with classes and objects. Here is an example similar to the Python and JavaScript examples.
+### **PHP**
+ PHP also supports object-oriented programming with classes and objects. Here is an example similar to the Python and JavaScript examples.
 
 ```php
 class MyClass {
@@ -252,7 +264,8 @@ $conn->close();
 
 ## **Asynchronous Programming**
 ---
-**Python**: Python 3.5 introduced the **`async`** and **`await`** keywords for handling asynchronous code. Here's a basic example using the **`aiohttp`** library to make asynchronous HTTP requests:
+### **Python**
+ Python 3.5 introduced the **`async`** and **`await`** keywords for handling asynchronous code. Here's a basic example using the **`aiohttp`** library to make asynchronous HTTP requests:
 
 ```python
 import aiohttp
@@ -271,7 +284,7 @@ loop = asyncio.get_event_loop()
 loop.run_until_complete(main())
 ```
 
-**JavaScript**: JavaScript is inherently asynchronous, with many built-in features for handling asynchronous code. Here's an example using **`fetch`** to make asynchronous HTTP requests:
+**`JavaScript`**: JavaScript is inherently asynchronous, with many built-in features for handling asynchronous code. Here's an example using **`fetch`** to make asynchronous HTTP requests:
 
 ```javascript
 async function get_page(url) {
@@ -283,7 +296,8 @@ async function get_page(url) {
 get_page('https://javascript.com').then(console.log);
 ```
 
-**PHP**: PHP is not traditionally used for asynchronous programming, but extensions and libraries are available that can add this functionality. One such library is **`ReactPHP`**, but the syntax is considerably different than Python's **`asyncio`** or JavaScript's **`Promise`** model:
+### **PHP**
+ PHP is not traditionally used for asynchronous programming, but extensions and libraries are available that can add this functionality. One such library is **`ReactPHP`**, but the syntax is considerably different than Python's **`asyncio`** or JavaScript's **`Promise`** model:
 
 ```php
 require 'vendor/autoload.php';
@@ -301,7 +315,8 @@ $loop->run();
 
 ## **Working with APIs**
 ---
-**Python**: Most APIs return data in JSON format. Python can parse JSON using the built-in **`json`** module. Here's an example using the **`requests`** library to get data from an API and parsing the JSON response:
+### **Python**
+ Most APIs return data in JSON format. Python can parse JSON using the built-in **`json`** module. Here's an example using the **`requests`** library to get data from an API and parsing the JSON response:
 
 ```python
 import requests
@@ -312,7 +327,8 @@ data = json.loads(response.text)
 print(data['name'])  # Prints: {your_username}
 ```
 
-**JavaScript**: JavaScript can also parse JSON using the built-in **`JSON`** object. Here's a similar example that uses **`fetch`**:
+### **JavaScript**
+ JavaScript can also parse JSON using the built-in **`JSON`** object. Here's a similar example that uses **`fetch`**:
     
 ```javascript
 fetch('https://api.github.com/users/{your_username}')
@@ -320,7 +336,8 @@ fetch('https://api.github.com/users/{your_username}')
     .then(data => console.log(data.name));  // Prints: {your_username}
 ```
 
-**PHP**: PHP can parse JSON using the built-in **`json_decode`** function. Here's a similar example that uses **`file_get_contents`** to get the data:
+### **PHP**
+ PHP can parse JSON using the built-in **`json_decode`** function. Here's a similar example that uses **`file_get_contents`** to get the data:
 
 ```php
 $response = file_get_contents('https://api.github.com/users/{your_username}');
