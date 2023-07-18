@@ -200,7 +200,7 @@ c = conn.cursor()
 c.execute('''CREATE TABLE stocks
              (date text, trans text, symbol text, qty real, price real)''')
 
-c.execute("INSERT INTO stocks VALUES ('2020-01-05','BUY','RHAT',100,35.14)")
+c.execute("INSERT INTO stocks VALUES ('2020-01-05','BUY','AUD',100,35.14)")
 
 conn.commit()
 conn.close()
@@ -223,7 +223,7 @@ connection.query('CREATE TABLE stocks (date VARCHAR(10), trans VARCHAR(4), symbo
     if(err) throw err;
 });
 
-connection.query("INSERT INTO stocks VALUES ('2020-01-05','BUY','RHAT',100,35.14)", (err, result) => {
+connection.query("INSERT INTO stocks VALUES ('2020-01-05','BUY','AUD',100,35.14)", (err, result) => {
     if(err) throw err;
 });
 
@@ -255,7 +255,7 @@ price FLOAT(10,2)
 $conn->query($sql);
 
 $sql = "INSERT INTO Stocks (date, trans, symbol, qty, price)
-VALUES ('2020-01-05', 'BUY', 'RHAT', 100, 35.14)";
+VALUES ('2020-01-05', 'BUY', 'AUD', 100, 35.14)";
 
 $conn->query($sql);
 
